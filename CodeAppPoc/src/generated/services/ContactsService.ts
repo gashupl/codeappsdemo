@@ -10,7 +10,7 @@ import type { IGetOptions, IGetAllOptions } from '../models/CommonModels';
 import type { Contacts } from '../models/ContactsModel';
 
 export class ContactsService {
-  private static readonly dataSourceName = 'Contacts';
+  private static readonly dataSourceName = 'contacts';
 
   private static readonly client = getClient(dataSourcesInfo);
 
