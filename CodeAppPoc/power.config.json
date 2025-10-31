@@ -8,5 +8,20 @@
   "logoPath": "Default",
   "localAppUrl": "http://localhost:3000/",
   "connectionReferences": {},
-  "databaseReferences": {}
+  "databaseReferences": {
+    "default.cds": {
+      "state": "Configured",
+      "instanceUrl": "https://pg-source.crm4.dynamics.com/",
+      "webApiVersion": "v9.0",
+      "dataSources": {
+        "Contacts": {
+          "entitySetName": "contacts",
+          "logicalName": "contact",
+          "isHidden": false
+        }
+      },
+      "version": "v9.0",
+      "environmentVariableName": ""
+    }
+  }
 }
