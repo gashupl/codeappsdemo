@@ -6,6 +6,8 @@
 // Models
 export * as CommonModels from './models/CommonModels';
 export * as ContactsModel from './models/ContactsModel';
+export * as SQLServerModel from './models/SQLServerModel';
 
 // Services
 export * from './services/ContactsService';
+export * from './services/SQLServerService';

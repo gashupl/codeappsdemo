@@ -7,7 +7,18 @@
   "buildEntryPoint": "index.html",
   "logoPath": "Default",
   "localAppUrl": "http://localhost:3000/",
-  "connectionReferences": {},
+  "connectionReferences": {
+    "2a62a58b-570c-4899-bc84-a3d9229a0d3b": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+      "displayName": "SQL Server",
+      "dataSources": [
+        "sql"
+      ],
+      "authenticationType": "sqlAuthentication",
+      "sharedConnectionId": "/providers/Microsoft.PowerApps/apis/shared_sql/connections/12316d4d5861472581aa422f591ed210",
+      "dataSets": {}
+    }
+  },
   "databaseReferences": {
     "default.cds": {
       "state": "Configured",
