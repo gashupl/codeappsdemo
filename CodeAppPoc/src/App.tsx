@@ -6,15 +6,19 @@ import { ContactsService } from './generated/services/ContactsService';
 import type { Contacts } from './generated/models/ContactsModel';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [dvCount, setDvCount] = useState(0)
   const [contacts, setContacts] = useState<Contacts[]>([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [dvLoading, setDvLoading] = useState(false)
+  const [dvError, setDvError] = useState<string | null>(null)
 
   const getData = async () => {
+    await getDataverseData(); 
+  }
+
+  const getDataverseData = async () => {
     try {
-      setLoading(true)
-      setError(null)
+      setDvLoading(true)
+      setDvError(null)
       const result = await ContactsService.getAll(); 
       if (result.data) {
         console.log('Contacts retrieved:', result.data);
@@ -24,13 +28,14 @@ function App() {
         setContacts([])
       }
     } catch (err) {
-      const errorMessage = 'Failed to retrieve contacts: ' + (err as Error).message
-      console.error(errorMessage, err);
-      setError(errorMessage)
+        const errorMessage = 'Failed to retrieve contacts: ' + (err as Error).message
+        console.error(errorMessage, err);
+        setDvError(errorMessage)
     } finally {
-      setLoading(false)
+        setDvLoading(false)
     }
   }
+
 
   // Use useEffect to call getData when component mounts
   useEffect(() => {
@@ -50,26 +55,26 @@ function App() {
       <h1>Vite + React</h1>
       
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setDvCount((dvCount) => dvCount + 1)}>
+          count is {dvCount}
         </button>
-        <button onClick={getData} disabled={loading} style={{ marginLeft: '10px' }}>
-          {loading ? 'Loading...' : 'Reload Contacts'}
+        <button onClick={getData} disabled={dvLoading} style={{ marginLeft: '10px' }}>
+          {dvLoading ? 'Loading...' : 'Reload Contacts'}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
 
-      {error && (
+      {dvError && (
         <div style={{ color: 'red', margin: '10px 0' }}>
-          Error: {error}
+          Error: {dvError}
         </div>
       )}
 
       {contacts.length > 0 && (
         <div style={{ margin: '20px 0' }}>
-          <h3>Contacts ({contacts.length})</h3>
+          <h3>Dataverse Contacts ({contacts.length})</h3>
           <ul style={{ textAlign: 'left', maxHeight: '200px', overflow: 'auto' }}>
             {contacts.map((contact, index) => (
               <li key={contact.contactid || index}>
