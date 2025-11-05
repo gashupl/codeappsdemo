@@ -1,5 +1,5 @@
 {
-  "appId": "",
+  "appId": "85da5d13-b87e-4cba-ad3b-5a10cdfa9707",
   "appDisplayName": "Code App Poc",
   "description": null,
   "environmentId": "dd6c1c54-0b95-ebc5-9b59-07e5b6dda459",
@@ -21,9 +21,7 @@
   },
   "databaseReferences": {
     "default.cds": {
-      "state": "Configured",
-      "instanceUrl": "https://pg-source.crm4.dynamics.com/",
-      "webApiVersion": "v9.0",
+      "databaseDetails": null,
       "dataSources": {
         "Contacts": {
           "entitySetName": "contacts",
@@ -31,8 +29,7 @@
           "isHidden": false
         }
       },
-      "version": "v9.0",
-      "environmentVariableName": ""
+      "actions": null
     }
   }
 }
