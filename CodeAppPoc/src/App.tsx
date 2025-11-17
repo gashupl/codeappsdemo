@@ -119,7 +119,7 @@ function App() {
           {dvLoading ? 'Loading...' : 'Reload Contacts'}
         </button>
         <button onClick={getSqlServerData} disabled={sqlLoading} style={{ marginLeft: '10px' }}>
-          {dvLoading ? 'Loading...' : 'Reload Payments'}
+          {sqlLoading ? 'Loading...' : 'Reload Payments (SQL Service)'}
         </button>
       </div>
 
