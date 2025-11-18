@@ -1,5 +1,6 @@
 {
-  "appId": "",
+  "appId": "85da5d13-b87e-4cba-ad3b-5a10cdfa9707",
+  "region": "prod",
   "appDisplayName": "Code App Poc",
   "description": null,
   "environmentId": "dd6c1c54-0b95-ebc5-9b59-07e5b6dda459",
@@ -7,12 +8,39 @@
   "buildEntryPoint": "index.html",
   "logoPath": "Default",
   "localAppUrl": "http://localhost:3000/",
-  "connectionReferences": {},
+  "connectionReferences": {
+    "2a62a58b-570c-4899-bc84-a3d9229a0d3b": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+      "displayName": "SQL Server",
+      "dataSources": [
+        "sql"
+      ],
+      "authenticationType": "sqlAuthentication",
+      "sharedConnectionId": "12316d4d5861472581aa422f591ed210",
+      "dataSets": {}
+    },
+    "1975ad39-8c9e-4a57-ac8a-24ff47a70189": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+      "displayName": "SQL Server",
+      "dataSources": [
+        "payment"
+      ],
+      "authenticationType": "sqlAuthentication",
+      "sharedConnectionId": "/providers/Microsoft.PowerApps/apis/shared_sql/connections/12316d4d5861472581aa422f591ed210",
+      "dataSets": {
+        "sql-codeappdemo.database.windows.net,db-codeappdemo": {
+          "dataSources": {
+            "payment": {
+              "tableName": "[dbo].[Payment]"
+            }
+          }
+        }
+      }
+    }
+  },
   "databaseReferences": {
     "default.cds": {
-      "state": "Configured",
-      "instanceUrl": "https://pg-source.crm4.dynamics.com/",
-      "webApiVersion": "v9.0",
+      "databaseDetails": null,
       "dataSources": {
         "Contacts": {
           "entitySetName": "contacts",
@@ -20,8 +48,7 @@
           "isHidden": false
         }
       },
-      "version": "v9.0",
-      "environmentVariableName": ""
+      "actions": null
     }
   }
 }

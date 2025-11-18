@@ -1,0 +1,24 @@
+{
+  "appId": "73b0a39d-335e-40c3-a33f-de65f2cf7c7d",
+  "appDisplayName": "My App Name",
+  "description": null,
+  "environmentId": "dd6c1c54-0b95-ebc5-9b59-07e5b6dda459",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "logoPath": "Default",
+  "localAppUrl": "http://localhost:3000/",
+  "connectionReferences": {},
+  "databaseReferences": {
+    "default.cds": {
+      "databaseDetails": null,
+      "dataSources": {
+        "contacts": {
+          "entitySetName": "contacts",
+          "logicalName": "contact",
+          "isHidden": false
+        }
+      },
+      "actions": null
+    }
+  }
+}
