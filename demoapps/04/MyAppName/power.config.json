@@ -1,7 +1,6 @@
 {
-  "appId": "",
-  "region": "prod",
-  "appDisplayName": "My App Name",
+  "appId": "1d10e936-49c2-4b8c-93aa-cecfb544ec4b",
+  "appDisplayName": "My SQL App Name",
   "description": null,
   "environmentId": "dd6c1c54-0b95-ebc5-9b59-07e5b6dda459",
   "buildPath": "./dist",
