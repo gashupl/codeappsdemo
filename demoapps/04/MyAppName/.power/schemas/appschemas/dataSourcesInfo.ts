@@ -10,6 +10,7 @@ export const dataSourcesInfo = {
     "version": "v2",
     "primaryKey": "payment_id",
     "dataSourceType": "Connector",
+    "connectionReferenceId": "b81f9703-893a-4d5b-ae12-150210da9499",
     "apis": {}
   }
 };
