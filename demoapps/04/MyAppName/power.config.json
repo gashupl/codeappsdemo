@@ -1,13 +1,32 @@
 {
   "appId": "",
-  "region": "prod", 
+  "region": "prod",
   "appDisplayName": "My App Name",
   "description": null,
-  "environmentId": "570a835a-4e57-e2e5-9e23-c8a3b3869f5b",
+  "environmentId": "dd6c1c54-0b95-ebc5-9b59-07e5b6dda459",
   "buildPath": "./dist",
   "buildEntryPoint": "index.html",
   "logoPath": "Default",
   "localAppUrl": "http://localhost:3000/",
-  "connectionReferences": {},
+  "connectionReferences": {
+    "b81f9703-893a-4d5b-ae12-150210da9499": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sql",
+      "displayName": "SQL Server",
+      "dataSources": [
+        "payment"
+      ],
+      "authenticationType": "sqlAuthentication",
+      "sharedConnectionId": "/providers/Microsoft.PowerApps/apis/shared_sql/connections/12316d4d5861472581aa422f591ed210",
+      "dataSets": {
+        "sql-codeappdemo.database.windows.net,db-codeappdemo": {
+          "dataSources": {
+            "payment": {
+              "tableName": "[dbo].[Payment]"
+            }
+          }
+        }
+      }
+    }
+  },
   "databaseReferences": {}
 }
