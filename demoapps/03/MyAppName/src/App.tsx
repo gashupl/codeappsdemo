@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,10 +10,6 @@ function App() {
   const [contacts, setContacts] = useState<Contacts[]>([])
   const [dvLoading, setDvLoading] = useState(false)
   const [dvError, setDvError] = useState<string | null>(null)
-
-  const getData = async () => {
-    await getDataverseData(); 
-  }
 
   const getDataverseData = async () => {
     try {
@@ -50,7 +46,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Power SDK Dataverse Connection</h1>
+      <h1>Power SDK Dataverse Connection (local)</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
